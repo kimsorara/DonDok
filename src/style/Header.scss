@@ -3,4 +3,53 @@
   justify-content: center;
   width: 100%;
   gap: 1rem;
+  h1 {
+    color: var(--main-color1);
+  }
+  input[type="date"] {
+    border: none;
+    text-align: center;
+  }
+}
+
+//SelectedDate
+span {
+  position: relative;
+  .selected_date {
+    z-index: 10;
+    position: absolute;
+    background-color: #f5f5f5;
+    padding: 0.5rem;
+    border-radius: 8px;
+    top: 3.5rem;
+    left: -22.5rem;
+    font-weight: 800;
+    min-width: 10rem;
+    display: flex;
+    flex-direction: column;
+    > div {
+      display: flex;
+      margin-top: 0.5rem;
+      justify-content: space-between;
+    }
+    .month_list {
+      text-align: center;
+      display: grid;
+      margin: 1rem auto;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    span {
+      padding: 0.2rem;
+      margin: 0.5rem;
+      border-radius: 4px;
+      transition: all 0.3s ease-in;
+    }
+    span:hover,
+    :focus {
+      color: var(--main-color2);
+      cursor: pointer;
+      outline: 1px solid var(--main-color1);
+      box-shadow: 1px 1px 2px 1px #c5c5c8;
+    }
+  }
 }

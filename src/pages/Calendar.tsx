@@ -1,5 +1,6 @@
 import "../style/Calender.scss";
-import CalenderBody from "../components/CalenderBody";
+import CalenderBody from "../components/Calender/CalenderBody";
+
 const Calendar = () => {
   return <CalenderBody />;
 };

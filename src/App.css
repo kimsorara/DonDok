@@ -1,26 +1,19 @@
 @import "./style/reset.css";
 
 :root {
-  --main-color1: #ca91dc;
-  --main-color2: #8aa7ec;
-  --main-color3: #5199ea;
-  --text-color: white;
+  --main-color1: #89b9ad;
+  --main-color2: #265073;
+  --main-color3: #7b66ff;
+  --text-color: #161315;
   --shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   --border-radius: 8px;
-
+  --white: #f4f9f9;
   --title-size: 20px;
   --body-size: 18px;
   --caption-size: 14px;
 }
 
 html {
-  background: linear-gradient(
-    var(--main-color1),
-    var(--main-color2),
-    var(--main-color3)
-  );
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 100%;
   color: var(--text-color);
   letter-spacing: 2px;

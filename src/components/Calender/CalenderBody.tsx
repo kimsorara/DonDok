@@ -1,8 +1,7 @@
-import "../style/Calender.scss";
-import { useState, useEffect } from "react";
+import "../../style/Calender.scss";
+import { useState } from "react";
 import { startOfMonth, endOfMonth, startOfWeek, endOfWeek } from "date-fns";
-import { dateCalc } from "../utill/dateCalc";
-import { number } from "prop-types";
+import { dateCalc } from "../../utill/dateCalc";
 const CalenderBody = () => {
   const [currentMonth, setCurrentMonth] = useState<Date>(new Date());
   const monthStart = startOfMonth(currentMonth);
