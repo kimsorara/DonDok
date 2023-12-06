@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
+
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 if ("serviceWorker" in navigator) {
@@ -13,7 +14,7 @@ if ("serviceWorker" in navigator) {
           console.log("Worker registration successful", registration.scope);
         },
         function (err) {
-          console.log("시바", err);
+          console.log("시류ㅐ", err);
         }
       )
       .catch(function (err) {

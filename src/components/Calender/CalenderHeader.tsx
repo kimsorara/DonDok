@@ -24,8 +24,8 @@ const CalenderHeader = ({
         <Icon icon="solar:round-alt-arrow-left-linear" />
       </div>
       <div onClick={calendarInputClick}>
-        <span>{format(currentDate, "yyyy")} 년</span>
-        <span>{format(currentDate, "M")} 월</span>
+        <span>{format(currentDate, "yyyy")}년</span>
+        <span>{format(currentDate, "M")}월</span>
       </div>
       <div onClick={nextMonth}>
         <Icon icon="solar:round-alt-arrow-right-linear" />

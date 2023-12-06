@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 
 import "../style/Header.scss";
 import CalenderHeader from "./Calender/CalenderHeader";
@@ -14,6 +14,30 @@ const Header = () => {
     },
   };
   const [selectDate, setSelectDate] = useState<boolean>(false);
+  const calenderRef = useRef<HTMLSpanElement | null>(null);
+
+  const handleClickOutside = useCallback(
+    (e: MouseEvent) => {
+      if (
+        selectDate &&
+        calenderRef.current &&
+        !calenderRef.current.contains(e.target as Node)
+      ) {
+        setSelectDate(false);
+      }
+    },
+    [selectDate]
+  );
+
+  useEffect(() => {
+    console.log("selectDate:", selectDate);
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [handleClickOutside, selectDate]);
   return (
     <div className="header">
       <CalenderHeader selected={setSelectDate} />
@@ -24,7 +48,7 @@ const Header = () => {
         Don-Dok$
       </motion.h1>
       {selectDate && (
-        <span>
+        <span ref={calenderRef}>
           <SelectedDate selected={setSelectDate} />
         </span>
       )}
