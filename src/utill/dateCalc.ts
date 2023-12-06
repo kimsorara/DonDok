@@ -1,4 +1,4 @@
-import { isSameDay, addDays, getDate } from "date-fns";
+import { addDays, getDate } from "date-fns";
 export const dateCalc = (start: Date): number[] => {
   const dayList: number[] = [];
   let num = 42;

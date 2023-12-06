@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Calendar from "../pages/Calendar";
 import Daily from "../pages/Daily";
 import Monthly from "../pages/Monthly";
-import Yearly from "../pages/Yearly";
+import Statistics from "../pages/Statistics";
 import RootLayout from "../components/RootLayout";
 export const router = createBrowserRouter([
   {
@@ -15,8 +15,8 @@ export const router = createBrowserRouter([
         element: <Monthly />,
       },
       {
-        path: "year",
-        element: <Yearly />,
+        path: "statistics",
+        element: <Statistics />,
       },
       {
         path: "calendar",
